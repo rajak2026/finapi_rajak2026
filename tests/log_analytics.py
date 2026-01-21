@@ -42,3 +42,5 @@ def send_log_to_loganalytics(log_type, log_data):
         print(f"❌ Failed to send logs: {response.status_code} - {response.text}")
     else:
         print("✅ Logs sent to Log Analytics.")
+        
+
