@@ -2,7 +2,7 @@ import requests
 import time
 from log_analytics import send_log_to_loganalytics
 
-BASE_URL = "https://finapi-rajak2026.azurewebsites.net" #  <------ Replace with your actual base URL
+BASE_URL = "https://finapi-rajak2026.azurewebsites.net"
 logs = []
 
 def log_result(name, status, url, method, duration, status_code, message=""):
@@ -114,7 +114,6 @@ def assert_in(value, options):
     assert value in options, f"{value} not in allowed values: {options}"
 
 # ----- Final hook to send logs -----
-
 def test_send_logs_to_log_analytics():
     print("Sending smoke test logs to Log Analytics (from final test)...")
     if logs:
